@@ -1,11 +1,14 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import React from 'react';
+import { RichArea } from '../components/rich-area';
 
 export default function HomePage() {
+  const [state, setState] = React.useState<string>();
   return (
-    <>
-      <Welcome />
-      <ColorSchemeToggle />
-    </>
+    <RichArea
+      label="content"
+      description="describe your post"
+      state={state}
+      setState={setState}
+    />
   );
 }
